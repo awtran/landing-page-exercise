@@ -1,0 +1,171 @@
+/* CURRENT HEADING STYLING USED */
+h3 {
+  font-size: 3.0rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+  color: #5484A4;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: 0.05rem;
+  color: #6C808B;
+}
+
+a {
+  text-decoration: none;
+  color: #43B0FC;
+}
+
+.bg-img {
+  background:url(../img/background.jpg);
+  width: 100%;
+  background-size: 100% 100%;
+  height: 320px;
+}
+
+.overlay {
+  max-width: 440px;
+  max-height: 490px;
+  background-color: rgba(255,255,255, 0.8);
+  padding: 24px;
+}
+
+.virta-img {
+  display: block;
+  margin: auto;
+  padding: 0 0 32px 0;
+}
+
+.cta-btn-div {
+
+}
+
+.cta-btn {
+  height: 56px;
+  width: 100%;
+  border-radius: 100px;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.15rem;
+
+  background: #3ACFFF; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(160deg, #3ACFFF, #43B0FC); /* For Safari */
+  background: -moz-linear-gradient(160deg, #3ACFFF, #43B0FC); /* For Firefox */
+  background: linear-gradient(160deg, #3ACFFF, #43B0FC); /* Standard syntax */
+
+  transition: all 0.2s;
+}
+
+.cta-btn:hover {
+  color: #FFFFFF;
+  box-shadow: 0px 8px 20px 0px rgba(100,140,200,0.3);
+
+  transition: all 0.2s;
+}
+
+.content-div {
+  text-align: center;
+}
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.testimonial-div {
+  padding: 24px;
+}
+
+.testimonial-img {
+  background-color: #CCC;
+  width: 250px;
+  height: 250px;
+  border-radius:100%;
+}
+
+.caption-text {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  letter-spacing: normal;
+  max-width: 250px;
+  margin: 8px auto 8px auto;
+}
+
+.testimonial-a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #5484A4;
+  text-transform: uppercase;
+}
+
+.footer {
+  width: 100%;
+  height: 120px;
+
+  background: #E4EEF4; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(right, #B0CFE1 , #E4EEF4); /* For Safari */
+  background: -moz-linear-gradient(left, #B0CFE1 , #E4EEF4); /* For Firefox */
+  background: linear-gradient(to left, #B0CFE1 , #E4EEF4); /* Standard syntax */
+}
+
+/* Larder than a phablet */
+@media (min-width: 550px) {
+  .footer {
+    height: 240px;
+  }
+}
+
+/* Larger than a tablet */
+@media (min-width: 750px) {
+  h3 {
+    font-size: 3.2rem;
+    line-height: 1.6;
+  }
+
+  p {
+    font-size: 2.2rem;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .cta-btn {
+    height: 70px;
+    width: 75%;
+    font-size: 2.2rem;
+  }
+
+  .virta-img {
+    margin: 0;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer {
+    height: 360px;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .caption-text {
+    font-size: 1.6rem;
+  }
+
+  .testimonial-a {
+    font-size: 1.6rem;
+  }
+
+  .bg-img {
+    height: 626px;
+  }
+}
