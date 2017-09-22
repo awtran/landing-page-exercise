@@ -1,5 +1,57 @@
-/* CURRENT HEADING STYLING USED */
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Grid
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Images
+- Divs
+*/
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Displays testimonials in a responsive grid */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 3.2rem 0 3.2rem 0;
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements are based on 10px sizing. Ex: 1.5rem = 15px */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 h3 {
+  margin: 0 0 2rem 0;
   font-size: 3.0rem;
   line-height: 1.2;
   font-weight: 500;
@@ -8,118 +60,25 @@ h3 {
 }
 
 p {
+  margin-top: 0;
   font-size: 1.5rem;
-  line-height: 1.2;
+  line-height: 1.4;
   letter-spacing: 0.05rem;
   color: #6C808B;
 }
 
-a {
-  text-decoration: none;
-  color: #43B0FC;
-}
-
-.bg-img {
-  background:url(../img/background.jpg);
-  width: 100%;
-  background-size: 100% 100%;
-  height: 320px;
-}
-
-.overlay {
-  max-width: 440px;
-  max-height: 490px;
-  background-color: rgba(255,255,255, 0.8);
-  padding: 24px;
-}
-
-.virta-img {
-  display: block;
-  margin: auto;
-  padding: 0 0 32px 0;
-}
-
-.cta-btn-div {
-
-}
-
-.cta-btn {
-  height: 56px;
-  width: 100%;
-  border-radius: 100px;
-  color: #FFFFFF;
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.15rem;
-
-  background: #3ACFFF; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(160deg, #3ACFFF, #43B0FC); /* For Safari */
-  background: -moz-linear-gradient(160deg, #3ACFFF, #43B0FC); /* For Firefox */
-  background: linear-gradient(160deg, #3ACFFF, #43B0FC); /* Standard syntax */
-
-  transition: all 0.2s;
-}
-
-.cta-btn:hover {
-  color: #FFFFFF;
-  box-shadow: 0px 8px 20px 0px rgba(100,140,200,0.3);
-
-  transition: all 0.2s;
-}
-
-.content-div {
-  text-align: center;
-}
-
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.testimonial-div {
-  padding: 24px;
-}
-
-.testimonial-img {
-  background-color: #CCC;
-  width: 250px;
-  height: 250px;
-  border-radius:100%;
-}
-
-.caption-text {
+.caption-p {
   font-size: 1.4rem;
   line-height: 1.8;
   letter-spacing: normal;
-  max-width: 250px;
-  margin: 8px auto 8px auto;
+  max-width: 200px;
+  margin: 0.8rem auto 0.8rem auto;
 }
 
-.testimonial-a {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #5484A4;
-  text-transform: uppercase;
-}
-
-.footer {
-  width: 100%;
-  height: 120px;
-
-  background: #E4EEF4; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(right, #B0CFE1 , #E4EEF4); /* For Safari */
-  background: -moz-linear-gradient(left, #B0CFE1 , #E4EEF4); /* For Firefox */
-  background: linear-gradient(to left, #B0CFE1 , #E4EEF4); /* Standard syntax */
-}
-
-/* Larder than a phablet */
+/* Larger than a phablet */
 @media (min-width: 550px) {
-  .footer {
-    height: 240px;
+  .caption-p {
+    max-width: 250px;
   }
 }
 
@@ -135,37 +94,201 @@ a {
     line-height: 1.6;
     font-weight: 300;
   }
+}
 
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .caption-p {
+    font-size: 1.6rem;
+  }
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  text-decoration: none;
+  color: #43B0FC;
+  transition: all 0.4s;
+}
+
+a:hover {
+  color: #0FA0CE;
+  transition: all 0.4s;
+}
+
+.testimonial-a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #5484A4;
+  text-transform: uppercase;
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .testimonial-a {
+    font-size: 1.6rem;
+  }
+}
+
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.cta-btn {
+  /* Button sizing */
+  height: 5.6rem;
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 1rem;
+
+  /* Button styling */
+  border: 0px solid #bbb;
+  border-radius: 100px;
+  background: #3ACFFF; /* Unsupported browsers */
+  background: -webkit-linear-gradient(160deg, #3ACFFF, #43B0FC); /* Safari */
+  background: -moz-linear-gradient(160deg, #3ACFFF, #43B0FC); /* Firefox */
+  background: linear-gradient(160deg, #3ACFFF, #43B0FC); /* Standard syntax */
+
+  /* Font styling */
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.15rem;
+  color: #FFFFFF;
+
+  /* Transitions */
+  transition: all 0.2s;
+}
+
+.cta-btn:hover {
+  color: #FFFFFF;
+}
+
+/* Larger than a tablet */
+@media (min-width: 750px) {
   .cta-btn {
-    height: 70px;
+    height: 7rem;
     width: 75%;
     font-size: 2.2rem;
-  }
-
-  .virta-img {
-    margin: 0;
-  }
-
-  .wrapper {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .footer {
-    height: 360px;
   }
 }
 
 /* Larger than desktop */
 @media (min-width: 1000px) {
-  .caption-text {
-    font-size: 1.6rem;
-  }
+  .cta-btn:hover {
+    color: #FFFFFF;
+    box-shadow: 0px 8px 20px 0px rgba(100,140,200,0.3);
+    transform: scale(1.1) translate(15px, 5px);
 
-  .testimonial-a {
-    font-size: 1.6rem;
+    transition: all 0.2s;
   }
+}
 
+/* Images
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.bg-img {
+  background:url(../img/background.jpg);
+  background-size: cover;
+  background-position: 85%;
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.virta-img {
+  display: block;
+  margin: auto;
+  padding: 0 0 3.2rem 0;
+}
+
+.testimonial-img {
+  background-color: #CCC;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+/* Larger than a phablet */
+@media (min-width: 550px) {
+  .testimonial-img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Larger than a tablet */
+@media (min-width: 750px) {
+  .virta-img {
+    margin: 0;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
   .bg-img {
     height: 626px;
+  }
+}
+
+/* Divs
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.overlay-div {
+  width: 85%;
+  max-width: 320px;
+  max-height: 490px;
+  background-color: rgba(255,255,255, 0.8);
+  padding: 2.4rem;
+}
+
+.content-div {
+  padding: 4rem 0 4rem 0;
+  text-align: center;
+}
+
+.testimonial-div {
+  padding: 2.4rem;
+}
+
+.footer-div {
+  /* Footer sizing */
+  width: 100%;
+  height: 120px;
+
+  /* Footer styling */
+  background: #E4EEF4; /* Unsupported browsers */
+  background: -webkit-linear-gradient(right, #B0CFE1 , #E4EEF4); /* Safari */
+  background: -moz-linear-gradient(left, #B0CFE1 , #E4EEF4); /* Firefox */
+  background: linear-gradient(to left, #B0CFE1 , #E4EEF4); /* Standard syntax */
+}
+
+/* Larger than iPhone SE */
+@media (min-width: 350px) {
+  /* Used to ensure full-width on iPhone6S */
+  .overlay-div {
+    width: 100%;
+  }
+}
+
+/* Larger than a phablet */
+@media (min-width: 550px) {
+  .overlay-div {
+    max-width: 440px;
+  }
+
+  .footer-div {
+    height: 240px;
+  }
+}
+
+/* Larger than a tablet */
+@media (min-width: 750px) {
+  .content-div {
+    padding: 8rem 0 8rem 0;
+  }
+  .footer-div {
+    height: 360px;
   }
 }
